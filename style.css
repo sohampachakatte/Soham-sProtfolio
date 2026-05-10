@@ -108,17 +108,6 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      ellipse 60% 60% at 70% 50%,
-      rgba(255, 92, 26, 0.12),
-      transparent
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 20% 80%,
-      rgba(0, 212, 170, 0.08),
-      transparent
-    );
   pointer-events: none;
 }
 
@@ -159,12 +148,20 @@ nav {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 800;
   line-height: 1.05;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-style: normal;
 }
 .hero-text h1 em {
   font-style: normal;
   color: var(--accent);
+}
+.hero-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .hero-text p {
   font-size: 1.05rem;
@@ -249,8 +246,10 @@ section {
 
 .section-header {
   max-width: 1100px;
-  margin: 0 auto 50px;
+  margin: 0 auto 60px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-label {
@@ -324,6 +323,7 @@ section {
   line-height: 1.8;
   font-size: 0.98rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .stat-row {
@@ -373,7 +373,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -543,26 +543,16 @@ section {
 
 /* ── CONTACT ── */
 #contact {
-  background:
-    radial-gradient(
-      ellipse 60% 60% at 70% 50%,
-      rgba(255, 92, 26, 0.12),
-      transparent
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 20% 80%,
-      rgba(0, 212, 170, 0.08),
-      transparent
-    );
+  background: var(--bg-deep);
 }
 
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .contact-info h3 {
@@ -758,9 +748,20 @@ footer p {
   .hero-text h1 {
     font-size: 1.3rem;
   }
+  .hero-text h4 {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
   .hero-text p {
     max-width: 100%;
     margin: 0 auto 32px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   .hero-btns {
     justify-content: center;
